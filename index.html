@@ -34,32 +34,38 @@
                 </div>
               </div>
               <div class="form-group">
-                <input type="number" class="form-control" id="years" placeholder="Loan Term">                
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Years</div>
+                  </div>                
+                  <input type="number" class="form-control" id="years" placeholder="Loan Period">                     
+                </div>
+             
               </div>
               <div class="form-group">
                 <input type="submit" value="Calculate" class="btn btn-dark btn-block">
               </div>
             </form>
             
-            <div id="loading" style="display:none">
+            <!-- <div id="loading" style="display:none">
               <img src="img/loading.gif" alt="">
-            </div>
+            </div> -->
             
             <div id="results" class="pt-4">
               <h5>Results</h5>
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">Monthly Payment</div>
+                    <div class="input-group-text">Monthly Payment $</div>
                   </div>
-                  <input type="number" class="form-control" id="monthly=payment" disabled>
+                  <input type="number" class="form-control" id="monthly-payment" disabled>
                 </div>
               </div>
               
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">Total Payment</div>
+                    <div class="input-group-text">Total Payment $</div>
                   </div>
                   <input type="number" class="form-control" id="total-payment" disabled>
                 </div>
@@ -68,7 +74,7 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">Total Interest</div>
+                    <div class="input-group-text">Total Interest $</div>
                   </div>
                   <input type="number" class="form-control" id="total-interest" disabled>
                 </div>
