@@ -31,11 +31,35 @@ function calculateResults(e) {
     totalPayment.value = (monthly * numberOfPayments).toFixed(2);
     totalInterest.value = ((monthly * numberOfPayments) - principal).toFixed(2);
   } else {
-    alert('Please check your numbers');
-    console.error('Something went wrong...');
+    // show error message
+    showError('Please check your numbers');
   }
-
-  console.log('Calculations complete.');
   
-
+console.log('Calculations complete, results displayed.');
 }
+
+// Show error 
+function showError(error) {
+  // Get elements
+  const card = document.querySelector('.card');
+  const heading = document.querySelector('.heading');
+  
+  // Create div
+  const errorDiv = document.createElement('div');
+  // Add class 
+  errorDiv.className = 'alert alert-danger';
+  // Create text node and append 
+  errorDiv.appendChild(document.createTextNode(error));
+  
+  // Insert error above heading 
+  card.insertBefore(errorDiv, heading);
+  
+  // Clear error after timeout 
+  setTimeout(clearError, 3000);
+}
+
+// Clear error  
+function clearError() {
+  document.querySelector('.alert').remove();
+}
+
